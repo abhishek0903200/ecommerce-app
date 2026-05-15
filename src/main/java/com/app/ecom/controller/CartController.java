@@ -19,7 +19,7 @@ public class CartController {
 
     @PostMapping
     public ResponseEntity<String> addToCart(
-            @RequestHeader("X-User_ID") String userId,
+            @RequestHeader("X-User-ID") String userId,
             @RequestBody CartItemRequest request){
         if(!cartService.addToCart(userId, request)){
             return ResponseEntity.badRequest().body("Product Out of Stock pr User not found pr Product not found");
@@ -36,7 +36,7 @@ public class CartController {
     }
 
     @GetMapping
-    public ResponseEntity<List<CartItem>> getCart(@RequestHeader("X-User_ID") String userId) {
+    public ResponseEntity<List<CartItem>> getCart(@RequestHeader("X-User-ID") String userId) {
         return ResponseEntity.ok(cartService.getCart(userId));
     }
 }
