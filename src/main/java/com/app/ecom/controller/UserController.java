@@ -18,7 +18,6 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping
-//    @RequestMapping(value = "api/users", method = RequestMethod.GET)
     public ResponseEntity<List<UserResponse>> getAllUsers() {
         return new ResponseEntity<>(userService.fetchAllUsers(), HttpStatus.OK);
     }

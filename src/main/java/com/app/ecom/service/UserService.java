@@ -26,6 +26,7 @@ public class UserService {
     }
 
     public void addUser(UserRequest userRequest){
+
         User user = new User();
         updateUserFromRequest(user, userRequest);
         userRepository.save(user);

@@ -10,8 +10,8 @@ spring:
     name: ecom-application
   datasource:
     url: jdbc:postgresql://localhost:5432/ecomdb
-    username: abhishek
-    password: *Gorakhpur1
+    username: postgres
+    password: "*Gorakhpur1"
   jpa:
     database: PostgreSQL
     show-sql: true
